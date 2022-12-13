@@ -22,7 +22,7 @@ class Monkey:
 class Item:
     def __init__(self, value, initial_monkey):
         super(Item, self).__init__()
-        self.value = value
+        self.value = mpz(value)
         self.visited_monkeys = [
             initial_monkey,
         ]
@@ -57,10 +57,10 @@ for iround in range(1, 10001):
                 item.visited_monkeys.append(monkey.if_false)
                 monkeys[monkey.if_false].items.append(item)
 
-    if iround % 500 == 0:
+    if iround % 100 == 0:
         print(f"After round {iround}:")
-        for i, monkey in enumerate(monkeys):
-            print(f"Monkey {i}: {monkey.inspections}")
+        # for i, monkey in enumerate(monkeys):
+        #     print(f"Monkey {i}: {monkey.inspections}")
 
 print("=" * 50)
 

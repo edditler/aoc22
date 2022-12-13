@@ -1,7 +1,7 @@
 import numpy as np
 import copy
 
-with open("input.txt") as f:
+with open("test.txt") as f:
     lines = [line.strip() for line in f.readlines()]
 
 height_map_inp = np.array([list(line) for line in lines])
