@@ -53,5 +53,6 @@ for x in range(0, max_dim + 1):
 # Linear Programming appears to be the solution
 # We have a system of constraints:
 #  - The solution must be outside of all circles
+#    - Since we are using the manhattan norm, the "circles" are described by for lines each
 #  - The solution must be within x \in [0, max_dim+1], y \in [0, max_dim+1]
 #  - The solution must be integer
